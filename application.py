@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 # print a nice greeting.
 def say_hello(username = "World"):
@@ -20,7 +20,7 @@ application = Flask(__name__)
 # add a rule for the index page.
 @application.route('/')
 def index():
-    return '<h1> Version 2.1</h1>'
+    return render_template('index.html')
 
 # run the app.
 if __name__ == "__main__":
